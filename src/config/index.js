@@ -1,9 +1,9 @@
 /**
  * 环境配置封装
  */
-const env = import.meta.env.Mode || "prod";
+const env = import.meta.env.MODE || "prod";
 const EnvConfig = {
-  dev: {
+  development: {
     //开发环境
     baseApi: "/",
     mockApi:
