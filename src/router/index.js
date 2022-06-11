@@ -8,7 +8,7 @@ const routes = [
       title: "首页",
     },
     redirect: "/welcome",
-    component: import("./../components/Home.vue"),
+    component: ()=>import("./../components/Home.vue"),
     children: [
       {
         name: "welcome",
@@ -16,7 +16,7 @@ const routes = [
         meta: {
           title: "欢迎页",
         },
-        component: import("./../components/Welcome.vue"),
+        component: ()=>import("./../views/Welcome.vue"),
       },
       {
         name: "login",
@@ -24,10 +24,18 @@ const routes = [
         meta: {
           title: "登录",
         },
-        component: import("./../components/Login.vue"),
+        component: ()=>import("./../views/Login.vue"),
       },
     ],
   },
+  {
+    name:'login',
+    path:'/login',
+    meta:{
+      title:'login'
+    },
+    component:()=>import('./../views/Login.vue')
+  }
 ];
 const router = createRouter({
   history: createWebHashHistory(),

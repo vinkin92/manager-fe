@@ -5,8 +5,10 @@ export default {
 </script>
 
 <template>
-  <h1>Welcome</h1>
-  <router-link to="/login">登录页</router-link>
+  <div class="welcome">
+    <h1>Welcome</h1>
+    <router-link to="/login">登录页</router-link>
+  </div>
 </template>
 
 <style scoped></style>
